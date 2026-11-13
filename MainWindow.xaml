@@ -22,12 +22,13 @@
             <RadioButton Content="Blue" FontSize="40" Margin="3" x:Name="rbBlue" GroupName="elso"/>
         </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-            <TextBox Margin="8" FontSize="20" MaxLength="7" x:Name="nameBox"/>
+            <TextBox Margin="8" FontSize="20" x:Name="nameBox" TextChanged="nameBox_TextChanged" />
             <Button Width="150" Content="Felvesz" FontSize="20" x:Name="btnFelvesz" Margin="20" Click="btnFelvesz_Click"/>
             <Button Width="150" Content="Töröl" FontSize="20" x:Name="btnTorol" Margin="10" Click="btnTorol_Click"/>
         </StackPanel>
         <StackPanel Grid.Column="2">
             <ListBox x:Name="nameList" Height="200" Margin="10"/>
         </StackPanel>
+        <Label Grid.Row="1" Content="Név hossza: 0" x:Name="lblName"/>
     </Grid>
 </Window>

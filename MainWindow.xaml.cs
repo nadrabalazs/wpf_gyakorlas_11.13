@@ -60,5 +60,11 @@ namespace gyakorlas_11_13
             }
             nameList.Items.Remove(nameList.SelectedItem);
         }
+
+        private void nameBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int wordsCount = nameBox.Text.Split().Length;
+            lblName.Content = $"Név hossza: {nameBox.Text.Length},Szavak száma: {wordsCount} ";
+        }
     }
 }
