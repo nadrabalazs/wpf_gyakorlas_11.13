@@ -1,0 +1,33 @@
+﻿<Window x:Class="gyakorlas_11_13.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gyakorlas_11_13"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="radioPanel">
+            <RadioButton Content="Red" FontSize="40" Margin="3" x:Name="rbRed" GroupName="elso"/>
+            <RadioButton Content="Green" FontSize="40" Margin="3" x:Name="rbGreen" GroupName="elso"/>
+            <RadioButton Content="Blue" FontSize="40" Margin="3" x:Name="rbBlue" GroupName="elso"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+            <TextBox Margin="8" FontSize="20" MaxLength="7" x:Name="nameBox"/>
+            <Button Width="150" Content="Felvesz" FontSize="20" x:Name="btnFelvesz" Margin="20" Click="btnFelvesz_Click"/>
+            <Button Width="150" Content="Töröl" FontSize="20" x:Name="btnTorol" Margin="10" Click="btnTorol_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <ListBox x:Name="nameList" Height="200" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
